@@ -55,8 +55,8 @@ def checktemps(status):
     if (maxCpuT <= (Tcase - 9)):
         if (status != 1):
             checkstatus(status)
-            ipmicmd("raw 0x30 0x30 0x02 0xff 0x18")
-            print("Cpu at: " + str(maxCpuT) + " celcius, Fan set to 4440 RPM", flush=True)
+            ipmicmd("raw 0x30 0x30 0x02 0xff 0x12")
+            print("Cpu at: " + str(maxCpuT) + " celcius, Fan set to 3000 RPM", flush=True)
         status = 1
 
     elif(maxCpuT > (Tcase - 9) and maxCpuT <= (Tcase -7)):
